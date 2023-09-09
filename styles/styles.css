@@ -18,7 +18,10 @@ body {
 }
 
 .background {
-  background-color: rgb(113, 111, 111);
+  background-image: url('../assets/bg.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
 }
