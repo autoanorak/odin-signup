@@ -1,3 +1,9 @@
+:root {
+  --label-font-size: 11px;
+  --input-font-size: 14px;
+  --error-font-size: 10px;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -19,7 +25,7 @@ body {
 
 .overlay {
   background-color: rgb(200, 200, 200);
-  width: 80%;
+  width: 70%;
   height: 100vh;
   float: right;
 }
@@ -30,42 +36,71 @@ body {
   flex-direction: column;
 }
 
-.form-container h2 {
+.form-container h1 {
   width: 100%;
   margin: 20px 0;
 }
 
 .form-row {
   display: flex;
-  gap: 20px;
-  margin: 20px 0;
+  gap: 50px;
+  margin-bottom: 15px;
 }
 
-.form-column {
-  display: flex;
-  flex-direction: column;
-  width: 38%;
+.form-row > div {
+  width: min(80%, 230px);
 }
 
-.form-column > input + label {
-  margin-top: 10px;
-}
-
-form label {
+label {
   display: block;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: var(--label-font-size);
 }
 
-form input {
-  width: clamp(200px, 80%, 220px);
-  height: 26px;
+input {
+  height: 30px;
+  width: 100%;
+  font-size: var(--input-font-size);
+  padding-left: 5px;
+  border-radius: 4px;
+  border: 1px solid rgb(119, 119, 119);
 }
 
-form button {
+input:focus {
+  box-shadow: 3px 2px 2px rgb(84, 84, 94);
+}
+
+p.error-message {
+  min-height: calc(var(--error-font-size) * 1.2);
+  font-size: var(--error-font-size);
+  color: rgb(224, 28, 28);
+}
+
+.error {
+  background-color: rgb(255, 173, 173);
+}
+
+button {
   padding: 8px 15px;
   background-color: rgb(81, 81, 81);
   color: white;
   border-radius: 5px;
   border: 1px solid black;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .overlay {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
 }

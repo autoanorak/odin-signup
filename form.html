@@ -5,35 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/fonts.css">
+  <script src="scripts.js" defer></script>
   <title>Form</title>
 </head>
 <body>
   <div class="background">
     <div class="overlay">
       <div class="form-container">
-        <h2>Contact Us</h2>
-        <form action="" method="post">
+        <h1>Sign Up</h1>
+        <form action="https://www.httpbin.org/post" method="post">
           <div class="form-row">
-            <div class="form-column">
+            <div>
               <label for="f_name">First Name</label>
-              <input id="f_name" type="text" autocomplete="given-name" required>
-              <label for="email">Email</label>
-              <input id="email" type="email" autocomplete="email" required>
-              <label for="password">Password</label>
-              <input id="password" type="password" autocomplete="off" required>
+              <input tabindex="1" id="f_name" name="f_name" type="text" autocomplete="given-name" required>
+              <p class="error-message"></p>
             </div>
-            <div class="form-column">
+            <div>
               <label for="l_name">Last Name</label>
-              <input id="l_name" type="text" autocomplete="family-name" required>
-              <label for="phone">Phone Number</label>
-              <input id="phone" type="tel" autocomplete="tel" required>
-              <label for="password_confirm">Confirm Password</label>
-              <input id="password" type="password" autocomplete="off" required>
+              <input tabindex="2" id="l_name" name="l_name" type="text" autocomplete="family-name" required>
+              <p class="error-message"></p>
             </div>
           </div>
           <div class="form-row">
-            <button type="submit">Create Account</button>
+            <div>
+              <label for="email">Email</label>
+              <input tabindex="3" id="email" name="email" type="email" autocomplete="email" required>
+              <p class="error-message"></p>
+            </div>
+            <div>
+              <label for="phone">Phone Number</label>
+              <input tabindex="4" id="phone" name="phone" type="tel" autocomplete="tel" required>
+              <p class="error-message"></p>
+            </div>
           </div>
+          <div class="form-row">
+            <div>
+              <label for="password">Password</label>
+              <input tabindex="5" id="password" name="password" type="password" autocomplete="off" required>
+              <p class="error-message"></p>
+            </div>
+            <div>
+              <label for="password_confirm">Confirm Password</label>
+              <input tabindex="6" id="password_confirm" name="password_confirm" type="password" autocomplete="off" required>
+              <p class="error-message"></p>
+            </div>
+          </div>
+          <button type="submit">Create Account</button>
         </form>
       </div>
       
