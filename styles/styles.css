@@ -65,7 +65,7 @@ a.photo-credit:focus {
 }
 
 .fields-section {
-  padding: 15px 0;
+  padding: 30px 0;
   background-color: rgb(212, 212, 212);
   box-shadow: 2px 10px 8px rgb(190, 190, 190);
 }
@@ -85,6 +85,30 @@ a.photo-credit:focus {
   padding: 0 4vw;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 30px;
+}
+
+.form-row > h1 {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.header > h2 {
+  font-weight: 100;
+}
+
+.header > h2:nth-child(1) {
+  color: rgba(0, 0, 0, 0.4)
+}
+
+.header > h2:nth-child(2) {
+  color: rgba(0, 0, 0, 0.7)
+}
+
 .form-row > div {
   width: min(80%, 230px);
 }
@@ -93,6 +117,7 @@ label {
   display: block;
   text-transform: uppercase;
   font-size: var(--label-font-size);
+  font-weight: 300;
 }
 
 input {
@@ -119,16 +144,18 @@ p.error-message {
 }
 
 button {
-  padding: 9px 19px;
+  padding: 9px 10px;
   width: min(130px, 50%);
   background-color: rgb(81, 81, 81);
   color: white;
   font-size: 13px;
+  font-weight: 300;
   border-radius: 5px;
   border: 1px solid black;
 }
 
 button:hover {
+  background-color: rgb(97, 97, 97);
   cursor: pointer;
 }
 
@@ -146,6 +173,7 @@ a:hover {
 
 p.normal-text {
   font-size: 13px;
+  font-weight: 300;
   padding-top: 2px;
 }
 
